@@ -990,6 +990,13 @@ button {
   line-height: 60px;
   margin-bottom: 5px;
 }
+.container main .price .price_title_info .headline {
+  font-size: 50px;
+  font-weight: 700;
+  width: 709px;
+  color: black;
+  line-height: 60px;
+}
 .container main .price .price_title_info p {
   text-align: center;
   color: #6e6e6e;
@@ -1302,10 +1309,6 @@ button {
     left: -13px;
     display: none;
   }
-  .container .bg nav .burger {
-    position: relative;
-    left: 13px;
-  }
   .container .bg header {
     margin-top: -180px;
     margin-bottom: 10px;
@@ -1528,14 +1531,25 @@ button {
   }
   .container main .travel_experience {
     width: 389px;
-    height: 1500px !important;
+    height: 1900px !important;
     display: flex;
     flex-direction: column;
     margin-bottom: 600px;
   }
+  .container main .travel_experience .travel_experience_title_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .container main .travel_experience .travel_experience_title_txt h1 {
-    width: 300px;
+    width: 350px;
     text-align: center;
+  }
+  .container main .travel_experience .travel_experience_title_txt p {
+    text-align: center;
+    width: 350px;
+    margin-bottom: 100px;
   }
   .container main .travel_experience_cards {
     display: flex;
@@ -1545,5 +1559,115 @@ button {
   .container main .travel_experience_cards .travel_experience_card {
     width: 300px !important;
     height: 500px !important;
+  }
+  .container main .price .price_title_info .headline {
+    width: 300px;
+  }
+  .container main .price .price_title_info p {
+    width: 300px;
+  }
+  .container main .price .price_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container main .price .price_cards .price_card {
+    width: 350px;
+  }
+  .container main .wandering_souls {
+    display: flex;
+    flex-direction: column;
+  }
+  .container main .wandering_souls .wandering_souls_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container main .wandering_souls .wandering_souls_info .wandering_souls_headline {
+    text-align: center;
+    width: 280px;
+  }
+  .container main .wandering_souls .wandering_souls_info p {
+    text-align: center;
+    width: 300px;
+  }
+  .container main .wandering_souls .wandering_souls_info .line {
+    width: 230px;
+  }
+  .container main .wandering_souls .wandering_souls_info .line_wider {
+    width: 350px;
+  }
+  .container main .roaming_tales {
+    display: flex;
+    flex-direction: column;
+  }
+  .container main .roaming_tales .roaming_tales_title_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container main .roaming_tales .roaming_tales_title_info p {
+    width: 300px;
+  }
+  .container main .roaming_tales .article_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .container main .roaming_tales .article_list .article_contetnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container main .roaming_tales .article_list .article_contetnt h1 {
+    width: 300px;
+  }
+  .container main .roaming_tales .article_list .article_contetnt img {
+    width: 340px;
+    margin-bottom: 30px;
+  }
+  .container main .roaming_tales .article_list .article_contetnt p {
+    width: 300px;
+    margin-bottom: 130px;
+  }
+  .container main .roaming_tales .article_list .article_contetnt .article_date {
+    height: 50px;
+  }
+  .container main .roaming_tales .article_list .article_preview .article_block {
+    display: flex;
+    flex-direction: column;
+  }
+  .container main .roaming_tales .article_list .article_preview .article_block .article_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container main .roaming_tales .article_list .article_preview .article_block .article_item p {
+    width: 300px;
+  }
+  .container footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 1200px !important;
+  }
+  .container footer h1 {
+    width: 300px;
+  }
+  .container footer .footer_address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-left: 10px;
+  }
+  .container footer .footer_address ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
   }
 }/*# sourceMappingURL=style.css.map */
