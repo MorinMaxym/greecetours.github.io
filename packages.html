@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;700&family=Raleway:ital,wght@0,303;1,303&family=Unbounded&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Raleway:ital,wght@0,303;1,303&family=Reenie+Beanie&family=Unbounded&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="scss/packages.css">
+        <title>Packages</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" alt="">
+                <ul>
+                    <li>
+                        <ul>
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+                                <ul class="submenu smaller_submenu">
+                                    <li><a href="index.html">Home</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Travel</a>
+                                <ul class="submenu bigger_submenu">
+                                    <li><a href="single_page.html">Search Page</a></li>
+                                    <li><a href="packages.html">Packages</a></li>
+                                    <li><a href="greece.html">Destinations</a></li>
+                                    <li><a href="typologies.html">Typologies</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul class="submenu">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="prices.html">Prices</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="pewview.html">All Previews</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Shop</a>
+                                <ul class="submenu smaller_submenu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Blog</a>
+                                <ul class="submenu">
+                                    <li><a href="archive.html">Archive</a></li>
+                                    <li><a href="blog.html">Single Post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog2.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <section class="off-screen-menu">
+                    <img src="img/logo.png" alt="" class="logo">
+                    <p class="burger_desc">Discover the World, one Full Adventure at a Time!</p>
+                    <section class="burger_gallery">
+                        <div class="row">
+                            <img src="img/burger_img1.png" alt="" width="80" height="80">
+                            <img src="img/burger_img2.png" alt="" width="80" height="80">
+                            <img src="img/burger_img3.png" alt="" width="80" height="80">
+                        </div>
+                        <div class="row">
+                            <img src="img/burger_img4.png" alt="" width="80" height="80">
+                            <img src="img/burger_img5.png" alt="" width="80" height="80">
+                            <img src="img/burger_img6.png" alt="" width="80" height="80">
+                        </div>
+                    </section>
+                    <section class="contacts">
+                        <h1>Our Contacts</h1>
+                        <div class="address">
+                            <p class="title_txt">Address</p>
+                            <p>
+                                Address1080 Brickell Ave - Miami
+                                United States of America
+                            </p>
+                        </div>
+                        <div class="Email">
+                            <p class="title_txt">Email</p>
+                            <p>info@travel.com</p>
+                        </div>
+                        <div class="Phone">
+                            <p class="title_txt">Phone</p>
+                            <p>
+                                Travel Agency +1 473 483 384
+                                Info Insurance +1 395 393 595
+                            </p>
+                        </div>
+                        <div class="icons">
+                            <p>Follow us</p>
+                            <div class="images">
+                                <div class="img_bg">
+                                    <img src="img/facebook.png" alt="icon" width="25">
+                                </div>
+                                <div class="img_bg">
+                                    <img src="img/twitter.png" alt="icon" width="25">
+                                </div>
+                                <div class="img_bg">
+                                    <img src="img/in.png" alt="icon" width="25">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <div class="burger">
+                    <div class="ham-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <button>
+                    <a href="#">Search</a>
+                </button>
+            </nav> 
+            <header>
+                <h1>Our Packages</h1>
+            </header>
+            <main>
+                <aside class="travel_filters">
+                    <div class="destination_filter">
+                        <h2>Select your destination:</h2>
+                        <select id="destination" name="destination" class="select">
+                            <option value="all">All Destinations</option>
+                            <option value="thailand">Thailand</option>
+                            <option value="france">France</option>
+                            <option value="japan">Japan</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </div>
+                    <div class="line"></div>
+                    <div class="date_filter">
+                        <h2>Select your date:</h2>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="line"></div>
+                    <div class="typologies_filter">
+                        <h2>Typologies :</h2>
+                        <form>
+                            <div class="column">
+                                <label for="option1">
+                                    <input type="checkbox" id="option1" name="option1"> Sports Activities
+                                </label>
+                                <label for="option2">
+                                    <input type="checkbox" id="option2" name="option2"> Heritage Tours
+                                </label>
+                                <label for="option3">
+                                    <input type="checkbox" id="option3" name="option3"> Budget Travel
+                                </label>
+                                <label for="option4">
+                                    <input type="checkbox" id="option4" name="option4"> Eco-tourism
+                                </label>
+                                <label for="option5">
+                                    <input type="checkbox" id="option5" name="option5"> Beach Holidays
+                                </label>
+                            </div>
+                            <div class="column">
+                                <label for="option6">
+                                    <input type="checkbox" id="option6" name="option6"> Family-Friendly
+                                </label>
+                                <label for="option7">
+                                    <input type="checkbox" id="option7" name="option7"> Road Trips
+                                </label>
+                                <label for="option8">
+                                    <input type="checkbox" id="option8" name="option8"> Culinary Tourism
+                                </label>
+                                <label for="option9">
+                                    <input type="checkbox" id="option9" name="option9"> Adventure Travel
+                                </label>
+                                <label for="option10">
+                                    <input type="checkbox" id="option10" name="option10"> Cultural Tours
+                                </label>
+                            </div>
+                        </form>
+                    </div>  
+                        <div class="line"></div>                                        
+                    <div class="max_price_filter">
+                        <div class="price_txt">
+                            <h2>Max price:</h2>
+                            <p id="sliderValue">$5000</p>
+                        </div>   
+                        <div class="labels">
+                            <input type="range" min="0" max="10000" value="5000" step="100" id="slider" class="slider">
+                        <label for="option11">
+                            <input type="checkbox" id="option11" name="option11"> See only promotions
+                        </label>
+                        </div>                   
+                    </div>
+                    <div class="line"></div>
+                    <div class="duration_filter filters">
+                        <h2>Durations:</h2>
+                        <div class="checkboxes">
+                            <label for="option12">
+                                <input type="checkbox" id="option12" name="option12"> 1 Week
+                            </label><br>
+                            <label for="option13">
+                                <input type="checkbox" id="option13" name="option13"> 10 Days
+                            </label><br>
+                        </div>
+                        <div class="checkboxes">
+                            <label for="option14">
+                                <input type="checkbox" id="option14" name="option14"> 15 Days
+                            </label><br>
+                            <label for="option14">
+                                <input type="checkbox" id="option14" name="option14"> 5 Days
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="difficult_filter filters">
+                        <h2>Difficulty:</h2>
+                        <div class="checkboxes">
+                            <label for="option15">
+                                <input type="checkbox" id="option15" name="option15"> Challenging
+                            </label><br>
+                            <label for="option16">
+                                <input type="checkbox" id="option16" name="option16"> Easy
+                            </label><br>
+                        </div>
+                        <div class="checkboxes">
+                            <label for="option17">
+                                <input type="checkbox" id="option17" name="option17"> Difficult
+                            </label><br>
+                            <label for="option18">
+                                <input type="checkbox" id="option18" name="option18"> Medium
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="age_filter filters">
+                        <h2>Min Age:</h2>
+                        <div class="checkboxes">
+                            <label for="option19">
+                                <input type="checkbox" id="option19" name="option19"> 0
+                            </label><br>
+                            <label for="option20">
+                                <input type="checkbox" id="option20" name="option20"> 18
+                            </label><br>
+                        </div>
+                        <div class="checkboxes">
+                            <label for="option21">
+                                <input type="checkbox" id="option21" name="option21"> 16
+                            </label><br>
+                            <label for="option22">
+                                <input type="checkbox" id="option22" name="option22"> 5
+                            </label><br>
+                        </div>
+                    </div>
+                </aside>
+                <section class="travel_cards">
+                    <div class="card_item">
+                        <img src="img/Section → Link → i-parallax-03-package-01.jpeg.png" alt="">
+                        <div class="card_item_info">
+                            <div class="card_time_destination">
+                                <div class="duration">
+                                    <img src="img/Symbol.png" alt="" class="clock">
+                                    <p>1 Week</p>
+                                </div>
+                                    <div class="icons">
+                                        <img src="img/Symbol (1).png" alt="" class="mail">
+                                        <img src="img/Symbol (2).png" alt="">
+                                    </div>
+                            </div>
+                            <div class="card_title">
+                                <h2>
+                                    Chiang Mai
+                                </h2>
+                                <div class="location_info">
+                                    <img src="img/location.png" alt="" width="11" height="15">
+                                    <p>Thailand</p>
+                                </div>
+                                <div class="line"></div>
+                                <p>
+                                    Visit the temples and the Chiang Mai Night
+                                    Bazaar, a huge huge market located on
+                                    Chiang Klan Road.
+                                </p>
+                                <div class="line"></div>
+                                <div class="card_footer_main">
+                                    <button class="card_details_btn">Search</button>
+                                    <div class="card_price">
+                                        <p>From</p>
+                                        <h2>$ 490</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <img src="img/Section → Link → i-parallax-04-package-02.jpeg.png" alt="">
+                        <div class="card_item_info">
+                            <div class="card_time_destination">
+                                <div class="duration">
+                                    <img src="img/Symbol (3).png" alt="" class="clock">
+                                    <p>5 Days</p>
+                                </div>
+                                    <div class="icons">
+                                        <img src="img/Symbol (4).png" alt="" class="mail">
+                                        <img src="img/Symbol (5).png" alt="">
+                                    </div>
+                            </div>
+                            <div class="card_title">
+                                <h2>
+                                    Chao Phraya
+                                </h2>
+                                    <div class="location_info">
+                                        <img src="img/location 1.png" alt="" width="11" height="15">
+                                        <p>Thailand</p>
+                                    </div>
+                                <div class="line"></div>
+                                <p>
+                                    Boat tour in the capital of Thailand, Bangkok,
+                                    to see the beautiful palaces and
+                                    monuments from the water.
+                                </p>
+                                <div class="line"></div>
+                                <div class="card_footer_main">
+                                    <button class="card_details_btn phraya">Search</button>
+                                    <div class="card_price">
+                                        <p class="card_price_from_left_first">From</p>
+                                        <h2>$ 98</h2>
+                                        <h2 class="crossed_out_txt">$134</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <div class="sale_label">SALE</div>
+                        <img src="img/Section → Link → i-parallax-05-package-03.jpeg.png" alt="">
+                        <div class="card_item_info">
+                            <div class="card_time_destination">
+                                <div class="duration">
+                                    <img src="img/Symbol (8).png" alt="" class="clock">
+                                    <p>10 Days</p>
+                                </div>
+                                    <div class="icons">
+                                        <img src="img/Symbol (9).png" alt="" class="mail">
+                                        <img src="img/Symbol (10).png" alt="">
+                                    </div>
+                            </div>
+                            <div class="card_title">
+                                <h2>
+                                    Bangkok
+                                </h2>
+                                <div class="location_info">
+                                    <img src="img/location 2.png" alt="" width="11" height="15">
+                                    <p>Thailand</p>
+                                </div>
+                                <div class="line"></div>
+                                <p>
+                                    Marvelous culinary and cultural trip to the
+                                    Thai capital with its wonderful monuments
+                                    and Buddha statues.
+                                </p>
+                                <div class="line"></div>
+                                <div class="card_footer_main">
+                                    <button class="card_details_btn bangkok">Search</button>
+                                    <div class="card_price">
+                                        <p class="card_price_from_left_second">From</p>
+                                        <h2>$ 1000</h2>
+                                        <h2 class="crossed_out_txt">$ 1023</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <div class="sale_label second_lable">SALE</div>
+                        <img src="img/nara.png" alt="">
+                        <div class="card_item_info">
+                            <div class="card_time_destination">
+                                <div class="duration">
+                                    <img src="img/red_clock.png" alt="" class="clock">
+                                    <p>15 Days</p>
+                                </div>
+                                    <div class="icons">
+                                        <img src="img/red_mail.png" alt="" class="mail">
+                                        <img src="img/red_symbol.png" alt="">
+                                    </div>
+                            </div>
+                            <div class="card_title">
+                                <h2>
+                                    Nara
+                                </h2>
+                                <div class="location_info">
+                                    <img src="img/red_location.png" alt="" width="11" height="15">
+                                    <p>Japan</p>
+                                </div>
+                                <div class="line"></div>
+                                <p>
+                                    Discover the incredible landmarks such as
+                                    the Todai-ji temple and its famous Great
+                                    Buddha statue.
+                                </p>
+                                <div class="line"></div>
+                                <div class="card_footer_main">
+                                    <button class="card_details_btn nara_btn">Search</button>
+                                    <div class="card_price">
+                                        <p class="card_price_from_left_second">From</p>
+                                        <h2>$ 890</h2>
+                                        <h2 class="crossed_out_txt">$ 999</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div class="numbered_navigator">
+                <ul>
+                    <li class="li_bg">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <footer>
+                <h1>
+                    Travel beyond your
+                    imagination, with our
+                    Travel Agency!
+                </h1>
+                
+                <div class="footer_address">
+                    <h2>Address</h2>
+                    <p>1080 Brickell Ave</p>
+                    <p>Miami - Florida</p>
+                    <p>U.S. of America</p>
+                    <div class="footer_icons">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="footer_contact">
+                    <h2>Contact</h2>
+                    <button>info@travel.com</button>
+                    <h2>+ 01 483 593 284</h2>
+                </div>
+            </footer>
+            <script src="js/packages.js"></script>
+        </div>
+    </body>
+</html>

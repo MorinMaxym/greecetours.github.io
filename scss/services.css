@@ -1,0 +1,612 @@
+@charset "UTF-8";
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-bottom: -1px;
+}
+.container nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 55px;
+  padding: 0;
+  margin: 0;
+}
+.container nav ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container nav ul li::after {
+  content: "•";
+  color: #1BBC9B;
+  font-size: 1.5rem;
+  position: relative;
+  left: 26px;
+}
+.container nav ul li:last-child::after {
+  content: "";
+}
+.container nav ul li.dropdown .submenu li::after {
+  content: "";
+}
+.container nav ul li a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.container nav ul li a span {
+  font-weight: 400;
+  color: #1BBC9B;
+}
+.container nav ul li a:hover {
+  color: #00d2b4;
+  transition: 0.4s ease;
+}
+.container nav ul li.dropdown a {
+  position: relative;
+}
+.container nav ul li.dropdown .submenu {
+  width: 120px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  background-color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 30px;
+}
+.container nav ul li.dropdown .submenu li {
+  padding: 5px 20px;
+}
+.container nav ul li.dropdown .submenu li a {
+  color: #fff;
+  font-size: 13px;
+  display: block;
+}
+.container nav ul li.dropdown .submenu li a:hover {
+  color: #00d2b4;
+  transition: 0.3s ease;
+}
+.container nav ul li.dropdown .submenu:last-child::after {
+  content: "";
+}
+.container nav ul li.dropdown .bigger_submenu {
+  width: 130px;
+}
+.container nav ul li.dropdown .smaller_submenu {
+  width: 80px;
+  position: absolute;
+  left: -13px;
+}
+.container nav ul li.dropdown:hover .submenu {
+  display: block;
+}
+.container nav .off-screen-menu {
+  background: #F2F2F2;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+  border-radius: 0 0 15px 15px;
+  z-index: 3;
+  overflow: auto;
+  padding-top: 90px;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+}
+.container nav .off-screen-menu .logo {
+  margin-left: 35px;
+}
+.container nav .off-screen-menu .burger_desc {
+  width: 170px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  text-align: center;
+}
+.container nav .off-screen-menu .burger_gallery .row img {
+  margin: 10px;
+  border-radius: 15px;
+}
+.container nav .off-screen-menu .contacts {
+  display: flex;
+  flex-direction: column;
+}
+.container nav .off-screen-menu .contacts h1 {
+  font-size: 21px;
+  font-weight: 700;
+}
+.container nav .off-screen-menu .contacts .title_txt {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container nav .off-screen-menu .contacts p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  width: 300px;
+}
+.container nav .off-screen-menu .icons p {
+  font-size: 21px;
+  font-weight: 700;
+  color: black;
+}
+.container nav .off-screen-menu .icons .images {
+  display: flex;
+  gap: 10px;
+}
+.container nav .off-screen-menu .icons .images .img_bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background: #1BBC9B;
+}
+.container nav .off-screen-menu .icons .images .img_bg:hover {
+  background: #434A54;
+  transition: 0.3s ease;
+}
+.container nav .off-screen-menu.active {
+  right: 0;
+}
+.container nav .burger {
+  padding: 1rem;
+  display: flex;
+}
+.container nav .ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+.container nav .ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+.container nav .ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.container nav .ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.container nav button {
+  width: 110px;
+  height: 44px;
+  border-radius: 5px;
+  background: #1BBC9B;
+  border: none;
+}
+.container nav button a {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+.container header {
+  background: linear-gradient(180deg, #000000 -30%, rgba(0, 0, 0, 0) 100%), url("../img/services_header.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 33.0625rem;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container header h1 {
+  color: white;
+  font-size: 3.125rem;
+}
+.container main .hot_spots {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 200px;
+}
+.container main .hot_spots .spots_summary h2 {
+  font-weight: 500;
+  font-size: 1.8675rem;
+  color: #1BBC9B;
+  font-family: "Reenie Beanie", cursive;
+}
+.container main .hot_spots .spots_summary h1 {
+  font-weight: 700;
+  font-size: 3.125rem;
+  width: 36.875rem;
+  line-height: 3.75rem;
+}
+.container main .hot_spots .spots_summary p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6E6E6E;
+  width: 38.3925rem;
+}
+.container main .hot_spots .spots_summary .text_with_check_marks {
+  margin-left: -1.75rem;
+}
+.container main .hot_spots .spots_summary .text_with_check_marks ul li {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6E6E6E;
+  width: 38.3925rem;
+}
+.container main .hot_spots .spots_summary .text_with_check_marks ul .check_mark {
+  font-weight: bolder;
+  position: relative;
+  left: -0.8125rem;
+}
+.container main .hot_spots .spots_summary button {
+  width: 8.5081rem;
+  height: 2.75rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  background: #1BBC9B;
+  border: none;
+  border-radius: 0.3125rem;
+  color: white;
+}
+.container main .hot_spots .spots_galary {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 650px;
+  flex-wrap: wrap;
+}
+.container main .hot_spots .spots_galary .water_city {
+  position: relative;
+  top: -210px;
+}
+.container main .hot_spots .spots_galary .wall {
+  position: relative;
+  top: -20px;
+}
+.container main .hot_spots .spots_galary .lake {
+  position: relative;
+  top: -56px;
+}
+.container main .choise_of_vacation {
+  margin-bottom: 100px;
+}
+.container main .choise_of_vacation .vacation_headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.container main .choise_of_vacation .vacation_headline h2 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 30px;
+  font-weight: 500;
+  color: #1BBC9B;
+  margin-bottom: -10px;
+}
+.container main .choise_of_vacation .vacation_headline h1 {
+  font-weight: 700;
+  font-size: 35px;
+}
+.container main .choise_of_vacation .vacation_cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.container main .choise_of_vacation .vacation_cards .card_label .card_item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.container main .choise_of_vacation .vacation_cards .card_label .card_item h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.container main .choise_of_vacation .vacation_cards .card_label .card_item p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6E6E6E;
+  width: 355px;
+  text-align: center;
+}
+.container main .gateaway {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #000000 -30%, rgba(0, 0, 0, 0) 100%), url("../img/archive_header.png");
+  background-size: cover;
+  background-position: center;
+  height: 692px;
+  margin-bottom: 100px;
+}
+.container main .gateaway h1 {
+  font-weight: 700;
+  font-size: 60px;
+  color: white;
+  width: 762.24px;
+  text-align: center;
+}
+.container main .gateaway p {
+  font-weight: 400;
+  font-size: 19.2px;
+  color: white;
+  width: 881.09px;
+  text-align: center;
+}
+.container main .gateaway button {
+  width: 181.42px;
+  height: 52.8px;
+  font-weight: 700;
+  font-size: 16.8px;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #1BBC9B;
+}
+.container main .world_number {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+.container main .world_number .achievements {
+  display: flex;
+  gap: 30px;
+}
+.container main .world_number .achievements .right_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container main .world_number .achievements .right_column .achievements_second_block {
+  border-bottom: 1px solid #E8E8E9;
+  border-left: 1px solid #E8E8E9;
+  border-right: 1px solid #E8E8E9;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.container main .world_number .achievements .right_column .achievements_first_block {
+  border: 1px solid #E8E8E9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.container main .world_number .achievements .left_column {
+  display: flex;
+  align-items: center;
+}
+.container main .world_number .achievements .left_column .line {
+  width: 307.5px;
+  height: 30px;
+  border-bottom: 1px solid #E8E8E9;
+}
+.container main .world_number .achievements .left_column .achievements_third_block {
+  height: 230px;
+  border-radius: 3px;
+  border: 1px solid #E8E8E9;
+}
+.container main .world_number .achievements .block_item {
+  width: 307.5px;
+  height: 190px;
+  text-align: center;
+}
+.container main .world_number .achievements .block_item h2 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 1px;
+}
+.container main .world_number .achievements .block_item p {
+  width: 230px;
+  font-weight: 400;
+  color: #6E6E6E;
+  margin: 0 auto;
+}
+.container main .world_number .number_info h2 {
+  font-family: "Reenie Beanie", cursive;
+  color: #1BBC9B;
+  font-size: 30px;
+  font-weight: 500;
+}
+.container main .world_number .number_info h1 {
+  width: 500px;
+  font-weight: 700;
+  font-size: 50px;
+}
+.container main .world_number .number_info p {
+  color: #6E6E6E;
+  line-height: 24px;
+  font-weight: 400;
+  width: 620.75px;
+}
+.container main .world_number .number_info button {
+  background: #434A54;
+  border: none;
+  border-radius: 5px;
+  width: 140.73px;
+  height: 44px;
+  color: white;
+  text-transform: uppercase;
+}
+.container main .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 130px;
+}
+.container main .contact .contact_headline {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container main .contact .contact_headline h2 {
+  color: #1BBC9B;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 30px;
+  font-weight: 500;
+}
+.container main .contact .contact_headline h1 {
+  font-weight: 700;
+  font-size: 35px;
+}
+.container main .contact .aaa {
+  display: flex;
+}
+.container main .contact .modal_window {
+  width: 738px;
+  height: 750.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: #F2F2F2;
+}
+.container main .contact .modal_window h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container main .contact .modal_window p {
+  color: #6E6E6E;
+  font-weight: 400;
+  width: 468.76px;
+}
+.container main .contact .modal_window .window {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container main .contact .modal_window .window input {
+  width: 475px;
+  height: 57px;
+  border-radius: 5px;
+  border: 1px solid #D8D8D8;
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
+  background: #F2F2F2;
+}
+.container main .contact .modal_window .window textarea {
+  background: #F2F2F2;
+  width: 475px;
+  height: 116px;
+  border-radius: 5px;
+  border: 1px solid #D8D8D8;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container main .contact .modal_window .window input::-moz-placeholder, .container main .contact .modal_window .window textarea::-moz-placeholder {
+  padding-left: 30px;
+}
+.container main .contact .modal_window .window input::placeholder,
+.container main .contact .modal_window .window textarea::placeholder {
+  padding-left: 30px;
+}
+.container main .contact .modal_window .window textarea::-moz-placeholder {
+  padding-top: 10px;
+}
+.container main .contact .modal_window .window textarea::placeholder {
+  padding-top: 10px;
+}
+.container main .contact .modal_window .window button {
+  width: 480px;
+  height: 51px;
+  background: #1BBC9B;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+.container footer {
+  width: 100%;
+  height: 474px;
+  background-image: linear-gradient(rgba(15, 44, 86, 0.706), rgba(49, 49, 49, 0.7)), url("../img/overlay.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.container footer h1 {
+  width: 580px;
+  font-size: 50px;
+}
+.container footer .footer_address, .container footer .footer_contact {
+  margin-top: 20px;
+}
+.container footer .footer_address {
+  margin-left: -150px;
+}
+.container footer .footer_address .footer_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+.container footer .footer_address ul {
+  margin-left: -39px;
+}
+.container footer .footer_address ul li h2 {
+  font-size: 20px;
+}
+.container footer .footer_address ul li p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.container footer .footer_contact button {
+  background: #1BBC9B;
+  width: 181.52px;
+  height: 44px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.container footer .footer_contact p {
+  font-weight: 700;
+  font-size: 25px;
+}/*# sourceMappingURL=services.css.map */

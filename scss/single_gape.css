@@ -1,0 +1,689 @@
+@charset "UTF-8";
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container .nav_header_bg {
+  background: #F2F2F2;
+}
+.container .nav_header_bg nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-bottom: -1px;
+}
+.container .nav_header_bg nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 55px;
+  padding: 0;
+  margin: 0;
+}
+.container .nav_header_bg nav ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container .nav_header_bg nav ul li::after {
+  content: "•";
+  color: #1BBC9B;
+  font-size: 1.5rem;
+  position: relative;
+  left: 26px;
+}
+.container .nav_header_bg nav ul li:last-child::after {
+  content: "";
+}
+.container .nav_header_bg nav ul li.dropdown .submenu li::after {
+  content: "";
+}
+.container .nav_header_bg nav ul li a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.container .nav_header_bg nav ul li a span {
+  font-weight: 400;
+  color: #1BBC9B;
+}
+.container .nav_header_bg nav ul li a:hover {
+  color: #00d2b4;
+  transition: 0.4s ease;
+}
+.container .nav_header_bg nav ul li.dropdown a {
+  position: relative;
+}
+.container .nav_header_bg nav ul li.dropdown .submenu {
+  width: 120px;
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  left: -30px;
+  background-color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 30px;
+}
+.container .nav_header_bg nav ul li.dropdown .submenu li {
+  padding: 5px 20px;
+}
+.container .nav_header_bg nav ul li.dropdown .submenu li a {
+  color: #fff;
+  font-size: 13px;
+  display: block;
+}
+.container .nav_header_bg nav ul li.dropdown .submenu li a:hover {
+  color: #00d2b4;
+  transition: 0.3s ease;
+}
+.container .nav_header_bg nav ul li.dropdown .submenu:last-child::after {
+  content: "";
+}
+.container .nav_header_bg nav ul li.dropdown .bigger_submenu {
+  width: 130px;
+}
+.container .nav_header_bg nav ul li.dropdown .smaller_submenu {
+  width: 80px;
+  position: absolute;
+  left: -13px;
+}
+.container .nav_header_bg nav ul li.dropdown:hover .submenu {
+  display: block;
+}
+.container .nav_header_bg nav .off-screen-menu {
+  background: #F2F2F2;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+  border-radius: 0 0 15px 15px;
+  z-index: 3;
+  overflow: auto;
+  padding-top: 90px;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+}
+.container .nav_header_bg nav .off-screen-menu .logo {
+  margin-left: 35px;
+}
+.container .nav_header_bg nav .off-screen-menu .burger_desc {
+  width: 170px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  text-align: center;
+}
+.container .nav_header_bg nav .off-screen-menu .burger_gallery .row img {
+  margin: 10px;
+  border-radius: 15px;
+}
+.container .nav_header_bg nav .off-screen-menu .contacts {
+  display: flex;
+  flex-direction: column;
+}
+.container .nav_header_bg nav .off-screen-menu .contacts h1 {
+  font-size: 21px;
+  font-weight: 700;
+}
+.container .nav_header_bg nav .off-screen-menu .contacts .title_txt {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container .nav_header_bg nav .off-screen-menu .contacts p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  width: 300px;
+}
+.container .nav_header_bg nav .off-screen-menu .icons p {
+  font-size: 21px;
+  font-weight: 700;
+  color: black;
+}
+.container .nav_header_bg nav .off-screen-menu .icons .images {
+  display: flex;
+  gap: 10px;
+}
+.container .nav_header_bg nav .off-screen-menu .icons .images .img_bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background: #1BBC9B;
+}
+.container .nav_header_bg nav .off-screen-menu .icons .images .img_bg:hover {
+  background: #434A54;
+  transition: 0.3s ease;
+}
+.container .nav_header_bg nav .off-screen-menu.active {
+  right: 0;
+}
+.container .nav_header_bg nav .burger {
+  padding: 1rem;
+  display: flex;
+}
+.container .nav_header_bg nav .ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+.container .nav_header_bg nav .ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+.container .nav_header_bg nav .ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.container .nav_header_bg nav .ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.container .nav_header_bg nav button {
+  width: 110px;
+  height: 44px;
+  border-radius: 5px;
+  background: #1BBC9B;
+  border: none;
+}
+.container .nav_header_bg nav button a {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+.container .nav_header_bg header {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  height: 700px;
+  margin-bottom: -260px;
+}
+.container .nav_header_bg .tour_card {
+  height: 200.5px;
+  background: #F2F2F2;
+  margin-bottom: 130px;
+}
+.container .nav_header_bg .tour_card .tour_title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200.5px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_location {
+  line-height: 5px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_location h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_location .ggg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_location .ggg p {
+  color: #6E6E6E;
+  font-size: 16px;
+  font-weight: 400;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_parameters {
+  display: flex;
+  gap: 130px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_parameters .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_parameters .item .item_txt p {
+  color: #6E6E6E;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.container .nav_header_bg .tour_card .tour_title .tour_parameters .item .item_txt h2 {
+  font-size: 23px;
+  font-weight: 700;
+}
+.container main .adventure_price_label {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.container main .adventure_price_label .price_card {
+  width: 437.5px;
+  height: 670px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container main .adventure_price_label .price_card .price {
+  display: flex;
+  width: 356px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container main .adventure_price_label .price_card .price .price_txt {
+  line-height: 5px;
+}
+.container main .adventure_price_label .price_card .price .price_txt .price_label {
+  color: #6E6E6E;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.container main .adventure_price_label .price_card .price .price_txt .price_form {
+  font-weight: 700;
+  font-size: 20px;
+}
+.container main .adventure_price_label .price_card .price .price_number .amount {
+  font-weight: 700;
+  font-size: 35px;
+}
+.container main .adventure_price_label .price_card .price .price_number .currency {
+  font-size: 25px;
+}
+.container main .adventure_price_label .price_card .form_selector {
+  display: flex;
+  align-items: center;
+  width: 356px;
+  justify-content: space-evenly;
+}
+.container main .adventure_price_label .price_card .form_selector .form_option {
+  font-size: 14px;
+  font-weight: 400;
+}
+.container main .adventure_price_label .price_card .form_selector .green_option {
+  color: #1BBC9B;
+}
+.container main .adventure_price_label .price_card .filter_members {
+  width: 356px;
+  line-height: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.container main .adventure_price_label .price_card .filter_members .date_txt {
+  font-size: 16px;
+  font-weight: 700;
+}
+.container main .adventure_price_label .price_card .filter_members .date {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+}
+.container main .adventure_price_label .price_card .filter_members .label {
+  font-weight: bold;
+}
+.container main .adventure_price_label .price_card .filter_members .description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+}
+.container main .adventure_price_label .price_card .filter_members .counter {
+  display: flex;
+  align-items: center;
+}
+.container main .adventure_price_label .price_card .filter_members .counter button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: none;
+}
+.container main .adventure_price_label .price_card .filter_members .counter span {
+  margin: 0 10px;
+  font-size: 25px;
+}
+.container main .adventure_price_label .price_card .services {
+  line-height: 8px;
+}
+.container main .adventure_price_label .price_card .services .extra_services {
+  font-size: 16px;
+}
+.container main .adventure_price_label .price_card .services .reservation {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6E6E6E;
+}
+.container main .adventure_price_label .price_card .services form {
+  display: flex;
+  flex-direction: column;
+  width: 356px;
+  margin-bottom: 30px;
+}
+.container main .adventure_price_label .price_card .services form label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6E6E6E;
+}
+.container main .adventure_price_label .price_card .services form label input {
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container main .adventure_price_label .price_card .services button {
+  width: 356px;
+  height: 51px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #1BBC9B;
+}
+.container main .adventure_price_label .adventure .adventure_summary {
+  margin-bottom: 70px;
+}
+.container main .adventure_price_label .adventure .adventure_summary h1 {
+  font-weight: 700;
+  font-size: 25px;
+}
+.container main .adventure_price_label .adventure .adventure_summary p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6E6E6E;
+  width: 824.49px;
+}
+.container main .adventure_price_label .adventure .adventure_summary span {
+  text-decoration: underline;
+  font-weight: 400;
+}
+.container main .adventure_price_label .adventure .map h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container main .adventure_price_label .adventure .map p {
+  width: 802px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  margin-bottom: 30px;
+}
+.container main .adventure_price_label .adventure .itinerary {
+  margin-bottom: 50px;
+}
+.container main .adventure_price_label .adventure .itinerary h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container main .adventure_price_label .adventure .itinerary p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  width: 837px;
+}
+.container main .adventure_price_label .adventure .itinerary .itinerary_arrival .arrival_item {
+  width: 842px;
+  display: flex;
+  align-items: center;
+}
+.container main .adventure_price_label .adventure .itinerary .itinerary_arrival .arrival_item span {
+  color: #1BBC9B;
+}
+.container main .adventure_price_label .adventure .itinerary .itinerary_arrival .arrival_item p {
+  font-weight: 700;
+  color: black;
+}
+.container main .adventure_price_label .adventure .itinerary .itinerary_arrival .arrival_item p:last-child {
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  left: 390px;
+}
+.container main .adventure_price_label .adventure .gallery {
+  margin-bottom: 100px;
+}
+.container main .adventure_price_label .adventure .gallery h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container main .adventure_price_label .adventure .gallery p {
+  width: 829px;
+  color: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+}
+.container main .adventure_price_label .adventure .gallery .gallery_images {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.container main .adventure_price_label .adventure .gallery .gallery_images .block {
+  display: flex;
+  gap: 25px;
+}
+.container main .adventure_price_label .adventure .gallery .gallery_images .block img {
+  border-radius: 15px;
+}
+.container main .column .included_stuff h1 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 7px;
+}
+.container main .column .included_stuff p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6E6E6E;
+  width: 824.49px;
+  width: 825.91px;
+}
+.container main .column .included_stuff .www {
+  width: 825px;
+  display: flex;
+  margin-left: -40px;
+}
+.container main .column .included_stuff .www .options .check_mark {
+  color: #1BBC9B;
+}
+.container main .column .included_stuff .www .options .cross {
+  color: black;
+}
+.container main .column .included_stuff .www .xxx {
+  margin-left: -450px;
+}
+.container main .packages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+.container main .packages .info {
+  text-align: center;
+  line-height: 6px;
+}
+.container main .packages .info p {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Reenie Beanie", cursive;
+  color: #1BBC9B;
+}
+.container main .packages .info h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.container main .packages .cards {
+  display: flex;
+  justify-content: space-around;
+  width: 1350px;
+}
+.container main .packages .cards .card_item {
+  background: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 418px;
+  height: 615px;
+  position: relative;
+}
+.container main .packages .cards .card_item .sale_label {
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #434A54;
+  text-align: center;
+  padding-top: 2px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+  width: 99px;
+  height: 27px;
+  border-radius: 30px;
+  z-index: 3;
+}
+.container main .packages .cards .card_item .card_title .card_footer_main {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 355px;
+  justify-content: space-between;
+}
+.container main .packages .cards .card_item .card_title .card_title_txt {
+  font-size: 24px;
+  color: #333;
+  position: relative;
+  left: 30px;
+}
+.container main .packages .cards .card_item .card_title .card_description {
+  width: 341px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6E6E6E;
+  position: relative;
+  left: 32px;
+}
+.container main .packages .cards .card_item .card_title .card_details_btn {
+  background: #1BBC9B;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+}
+.container main .packages .cards .card_item .card_title .azure {
+  background: #14B9D5;
+}
+.container main .packages .cards .card_item .card_title .bangkok {
+  background: #BA71DA;
+}
+.container main .packages .cards .card_item .card_title .card_price {
+  display: flex;
+  flex-direction: column;
+  line-height: 1px;
+}
+.container main .packages .cards .card_item .card_title .card_price h2 {
+  font-size: 24px;
+  color: #333;
+}
+.container main .packages .cards .card_item .card_title .card_price p {
+  font-size: 14px;
+  color: #6E6E6E;
+}
+.container main .packages .cards .card_item .location_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  margin-left: 20px;
+}
+.container footer {
+  width: 100%;
+  height: 474px;
+  background-image: linear-gradient(rgba(15, 44, 86, 0.706), rgba(49, 49, 49, 0.7)), url("../img/overlay.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.container footer h1 {
+  width: 580px;
+  font-size: 50px;
+}
+.container footer .footer_address, .container footer .footer_contact {
+  margin-top: 20px;
+}
+.container footer .footer_address {
+  margin-left: -150px;
+}
+.container footer .footer_address .footer_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+.container footer .footer_address ul {
+  margin-left: -39px;
+}
+.container footer .footer_address ul li h2 {
+  font-size: 20px;
+}
+.container footer .footer_address ul li p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.container footer .footer_contact button {
+  background: #1BBC9B;
+  width: 181.52px;
+  height: 44px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.container footer .footer_contact p {
+  font-weight: 700;
+  font-size: 25px;
+}/*# sourceMappingURL=single_gape.css.map */

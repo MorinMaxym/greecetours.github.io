@@ -1,0 +1,559 @@
+@charset "UTF-8";
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-bottom: -1px;
+}
+.container nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 55px;
+  padding: 0;
+  margin: 0;
+}
+.container nav ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container nav ul li::after {
+  content: "•";
+  color: #1BBC9B;
+  font-size: 1.5rem;
+  position: relative;
+  left: 26px;
+}
+.container nav ul li:last-child::after {
+  content: "";
+}
+.container nav ul li.dropdown .submenu li::after {
+  content: "";
+}
+.container nav ul li a {
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.container nav ul li a span {
+  font-weight: 400;
+  color: #1BBC9B;
+}
+.container nav ul li a:hover {
+  color: #00d2b4;
+  transition: 0.4s ease;
+}
+.container nav ul li.dropdown a {
+  position: relative;
+}
+.container nav ul li.dropdown .submenu {
+  width: 120px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  background-color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 30px;
+}
+.container nav ul li.dropdown .submenu li {
+  padding: 5px 20px;
+}
+.container nav ul li.dropdown .submenu li a {
+  color: #fff;
+  font-size: 13px;
+  display: block;
+}
+.container nav ul li.dropdown .submenu li a:hover {
+  color: #00d2b4;
+  transition: 0.3s ease;
+}
+.container nav ul li.dropdown .submenu:last-child::after {
+  content: "";
+}
+.container nav ul li.dropdown .bigger_submenu {
+  width: 130px;
+}
+.container nav ul li.dropdown .smaller_submenu {
+  width: 80px;
+  position: absolute;
+  left: -13px;
+}
+.container nav ul li.dropdown:hover .submenu {
+  display: block;
+}
+.container nav .off-screen-menu {
+  background: #F2F2F2;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+  border-radius: 0 0 15px 15px;
+  z-index: 3;
+  overflow: auto;
+  padding-top: 90px;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+}
+.container nav .off-screen-menu .logo {
+  margin-left: 35px;
+}
+.container nav .off-screen-menu .burger_desc {
+  width: 170px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  text-align: center;
+}
+.container nav .off-screen-menu .burger_gallery .row img {
+  margin: 10px;
+  border-radius: 15px;
+}
+.container nav .off-screen-menu .contacts {
+  display: flex;
+  flex-direction: column;
+}
+.container nav .off-screen-menu .contacts h1 {
+  font-size: 21px;
+  font-weight: 700;
+}
+.container nav .off-screen-menu .contacts .title_txt {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container nav .off-screen-menu .contacts p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6E6E6E;
+  width: 300px;
+}
+.container nav .off-screen-menu .icons p {
+  font-size: 21px;
+  font-weight: 700;
+  color: black;
+}
+.container nav .off-screen-menu .icons .images {
+  display: flex;
+  gap: 10px;
+}
+.container nav .off-screen-menu .icons .images .img_bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background: #1BBC9B;
+}
+.container nav .off-screen-menu .icons .images .img_bg:hover {
+  background: #434A54;
+  transition: 0.3s ease;
+}
+.container nav .off-screen-menu.active {
+  right: 0;
+}
+.container nav .burger {
+  padding: 1rem;
+  display: flex;
+}
+.container nav .ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+.container nav .ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+.container nav .ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.container nav .ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.container nav button {
+  width: 110px;
+  height: 44px;
+  border-radius: 5px;
+  background: #1BBC9B;
+  border: none;
+}
+.container nav button a {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+.container header {
+  background: linear-gradient(180deg, #000000 -30%, rgba(0, 0, 0, 0) 100%), url("../img/prices_header.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 529px;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container header h1 {
+  color: white;
+  font-size: 50px;
+}
+.container main .offers {
+  margin-bottom: 150px;
+}
+.container main .offers .offers_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.container main .offers .offers_info h2 {
+  color: #1BBC9B;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: "Reenie Beanie", cursive;
+  margin-bottom: -8px;
+}
+.container main .offers .offers_info h1 {
+  font-size: 50px;
+  margin-bottom: -8px;
+}
+.container main .offers .offers_info p {
+  color: #6E6E6E;
+  width: 617.38px;
+  text-align: center;
+  font-weight: 400;
+}
+.container main .offers .offers_cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.container main .offers .offers_cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F2F2F2;
+  border-radius: 16px;
+}
+.container main .offers .offers_cards .card .check_mark {
+  position: relative;
+  left: -20px;
+}
+.container main .offers .offers_cards .card .line {
+  background: #E4E4E4;
+  height: 1px;
+  width: 420px;
+}
+.container main .offers .offers_cards .card h2 {
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  top: 23px;
+}
+.container main .offers .offers_cards .card p {
+  text-align: center;
+  width: 300px;
+  color: #6E6E6E;
+  font-weight: 400;
+  font-size: 16px;
+}
+.container main .offers .offers_cards .card h1 {
+  font-size: 35px;
+}
+.container main .offers .offers_cards .card span {
+  font-size: 18px;
+}
+.container main .offers .offers_cards .card ul li {
+  line-height: 40px;
+  text-align: center;
+  color: #6E6E6E;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.container main .offers .offers_cards .card button {
+  width: 421px;
+  height: 44px;
+  color: white;
+  background: #1BBC9B;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  font-size: 14px;
+}
+.container main .offers .offers_cards .dark_card {
+  background: #434A54;
+}
+.container main .offers .offers_cards .dark_card h2, .container main .offers .offers_cards .dark_card h1, .container main .offers .offers_cards .dark_card p {
+  color: white;
+}
+.container main .offers .offers_cards .dark_card ul li {
+  color: white;
+}
+.container main .offers .offers_cards .dark_card .line {
+  background: rgba(0, 0, 0, 0.1294117647);
+}
+.container main .travel_offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 110px;
+  background: #F2F2F2;
+  height: 890px;
+  margin-bottom: 120px;
+}
+.container main .travel_offer .travel_info h1 {
+  width: 625px;
+  font-size: 50px;
+  margin-bottom: -20px;
+}
+.container main .travel_offer .travel_info .text_white {
+  color: white;
+}
+.container main .travel_offer .travel_info .text_green {
+  background: #1BBC9B;
+}
+.container main .travel_offer .travel_info .travel_price_label {
+  width: 280px;
+  display: flex;
+  gap: 20px;
+}
+.container main .travel_offer .travel_info .travel_price_label .travel_price {
+  font-size: 35px;
+}
+.container main .travel_offer .travel_info .travel_price_label .crossed_out_txt {
+  color: #868686;
+  text-decoration: line-through;
+}
+.container main .travel_offer .travel_info .travel_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 530px;
+  margin-bottom: 40px;
+}
+.container main .travel_offer .travel_info .travel_icons img {
+  margin-right: 15px;
+}
+.container main .travel_offer .travel_info .travel_icons p {
+  color: #000000;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.container main .travel_offer .travel_info .user {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.container main .travel_offer .travel_info .user .user_info, .container main .travel_offer .travel_info .user h2, .container main .travel_offer .travel_info .user p {
+  font-size: 16px;
+}
+.container main .travel_offer .travel_info .sale {
+  width: 74.89px;
+  height: 31px;
+  background: #434A54;
+  border-radius: 30px;
+  position: relative;
+  top: 20px;
+}
+.container main .travel_offer .travel_info .sale p {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  left: 20px;
+  top: 3px;
+}
+.container main .travel_offer .travel_info p {
+  color: #6E6E6E;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  width: 610.49px;
+}
+.container main .next_adventure {
+  display: flex;
+  justify-content: center;
+  gap: 370px;
+  margin-bottom: 120px;
+}
+.container main .next_adventure .adventure_info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 50px;
+}
+.container main .next_adventure .adventure_info p {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 500;
+  font-size: 30px;
+  color: #1BBC9B;
+  margin-bottom: -18px;
+}
+.container main .next_adventure .adventure_info h1 {
+  width: 460px;
+  font-size: 50px;
+  font-weight: 700;
+}
+.container main .next_adventure .adventure_info button {
+  width: 117.19px;
+  height: 54px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background: #1BBC9B;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+.container main .next_adventure .adventure_summary p {
+  width: 613.53px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6E6E6E;
+}
+.container main .next_adventure .adventure_summary span {
+  text-decoration: underline;
+  font-weight: 400;
+}
+.container main .next_adventure .adventure_list {
+  width: 800px;
+}
+.container main .next_adventure .adventure_list ul {
+  list-style: none;
+  padding: 0;
+}
+.container main .next_adventure .adventure_list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+.container main .next_adventure .adventure_list ul li:last-child {
+  border-bottom: none;
+}
+.container main .next_adventure .adventure_list ul li p {
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+}
+.container main .next_adventure .adventure_list ul li .tour_price {
+  position: relative;
+  color: #00c9a7;
+}
+.container main .next_adventure .adventure_list ul li .edge {
+  left: -40px;
+}
+.container main .next_adventure .adventure_list ul li .cruise {
+  left: -50px;
+}
+.container main .next_adventure .adventure_list ul li .lost {
+  left: -70px;
+}
+.container main .next_adventure .adventure_list ul li .coast {
+  left: -45px;
+}
+.container main .next_adventure .adventure_list .line {
+  width: 600px;
+  height: 1px;
+  margin-left: 5px;
+  background: #D5D8DC;
+}
+.container footer {
+  width: 100%;
+  height: 474px;
+  background-image: linear-gradient(rgba(15, 44, 86, 0.706), rgba(49, 49, 49, 0.7)), url("../img/overlay.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.container footer h1 {
+  width: 580px;
+  font-size: 50px;
+}
+.container footer .footer_address, .container footer .footer_contact {
+  margin-top: 20px;
+}
+.container footer .footer_address {
+  margin-left: -150px;
+}
+.container footer .footer_address .footer_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+.container footer .footer_address ul {
+  margin-left: -39px;
+}
+.container footer .footer_address ul li h2 {
+  font-size: 20px;
+}
+.container footer .footer_address ul li p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.container footer .footer_contact button {
+  background: #1BBC9B;
+  width: 181.52px;
+  height: 44px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.container footer .footer_contact p {
+  font-weight: 700;
+  font-size: 25px;
+}/*# sourceMappingURL=prices.css.map */

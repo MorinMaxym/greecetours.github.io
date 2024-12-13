@@ -1,0 +1,23 @@
+{
+    "offers": [
+        {
+            "image": "img/last_minute.png",
+            "sale_label": "sale",
+            "title": "Last Minute Summer Travel Tours",
+            "highlighted_text": "Summer",
+            "original_price": 930,
+            "discounted_price": 430,
+            "description": "Come to the agency to take advantage of our last minute summer trips. You can go on a cruise, in a wonderful tourist village or take an organized tour at an impactful price with 100% quality. Our offers are updated weekly so don't miss out on this fantastic opportunity.",
+            "icons": [
+                { "icon": "img/green_location.png", "text": "Europe" },
+                { "icon": "img/green_plane.png", "text": "Air Travel" },
+                { "icon": "img/green_sun.png", "text": "Summer Months" }
+            ],
+            "user": {
+            "avatar": "img/avatar.png",
+            "name": "Sophie Collins",
+            "position": "Experienced Travel Planner"
+            }
+        }
+    ]
+}

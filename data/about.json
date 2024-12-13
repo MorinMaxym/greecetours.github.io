@@ -1,0 +1,37 @@
+{
+    "headline": {
+        "title": "Stories from Satisfied Customers",
+        "subtitle": "Happy Travelers Share Their Experiences"
+    },
+    "review": {
+        "feedback": "I had the most amazing trip thanks to this travel agency. They took care of everything from flights to accommodations and even helped me plan out my itinerary. I highly recommend them.",
+    "user": {
+        "name": "Heidi",
+        "city": "New York",
+        "profileImage": "img/avatar.png"
+    },
+        "backgroundImage": "img/Section → Section → i-parallax-21-1024x683.jpeg.png"
+    },
+    "gallery": [
+    {
+        "image": "img/Section → Section → i-parallax-20-1024x683.jpeg.png",
+        "description": "Main gallery image"
+    },
+    {
+        "image": "img/Section → Section → Descriptions → Term → Link → i-parallax-19.jpeg.png",
+        "description": "Small gallery image 1"
+    },
+    {
+        "image": "img/Section → Section → Descriptions → Term → Link → i-parallax-18.jpeg.png",
+        "description": "Small gallery image 2"
+    },
+    {
+        "image": "img/Section → Section → Descriptions → Term → Link → i-parallax-17.jpeg.png",
+        "description": "Small gallery image 3"
+    },
+    {
+        "image": "img/Section → Section → Descriptions → Term → Link → i-parallax-16.jpeg.png",
+        "description": "Small gallery image 4"
+    }
+    ]
+}
