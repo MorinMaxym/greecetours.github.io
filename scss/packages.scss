@@ -701,3 +701,169 @@ button{
         }
     }
 }
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    
+    .container{
+
+        nav{
+            width: 389px;
+
+            img{
+                position: relative;
+                left: -20px;
+            }
+
+            ul{
+
+                li{
+                    display: none;
+                }
+            }
+
+            button{
+                position: relative;
+                left: -13px;
+                display: none;
+            }
+
+            .off-screen-menu.active {
+                width: 200px;
+                left: 150px;
+                top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .burger_gallery{
+                    margin-left: 70px;
+                }
+
+                .contacts{
+                    
+                    h1{
+                        margin-left: 10px;
+                        text-align: center;
+                    }
+
+                    p{
+                        text-align: center;
+                        width: 180px;
+                    }
+
+                    .icons{
+
+                        .images{
+
+                            .img_bg{
+                                position: relative;
+                                left: 5px;
+
+                                img{
+                                    margin-left: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+
+            .travel_filters{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .destination_filter{
+                    
+                    .select{
+                        width: 300px;
+                    }
+                }
+
+                .date_filter{
+
+                    input{
+                        width: 300px;
+                    }
+                }
+            }
+
+            .travel_cards{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+
+                .card_item{
+                    width: 300px !important;
+
+                    .card_item_info{
+
+                        .card_time_destination{
+                            width: 270px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                        }
+
+                        .card_footer_main{
+
+                            .card_price{
+                                width: 200px;
+                            }
+
+                            .ppp{
+                                width: 100px;
+                                position: relative;
+                                left: -20px;
+
+                                .card_price_from_left_second{
+                                    position: relative;
+                                    left: 90px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .numbered_navigator{
+            display: flex;
+            position: relative;
+            left: -930px;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 1200px !important;
+
+            h1{
+                width: 300px;
+            }
+
+            .footer_address{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 350px;
+                margin-left: 10px;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 380px;
+                }
+            }
+        }
+    }
+}
