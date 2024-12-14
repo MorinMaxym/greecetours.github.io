@@ -186,6 +186,9 @@ button {
 .container nav .off-screen-menu.active {
   right: 0;
 }
+.container nav .off-screen-menu.active ul {
+  display: none;
+}
 .container nav .burger {
   padding: 1rem;
   display: flex;
@@ -623,6 +626,21 @@ button {
   }
   .container nav .off-screen-menu.active .contacts .icons .images .img_bg img {
     margin-left: 40px;
+  }
+  .container nav .off-screen-menu.active ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+  .container nav .off-screen-menu.active ul h1 {
+    margin-bottom: -30px;
+  }
+  .container nav .off-screen-menu.active ul ul li::after {
+    content: "";
+    display: none;
+  }
+  .container nav .off-screen-menu.active ul li {
+    display: block;
   }
   .container main {
     display: flex;
