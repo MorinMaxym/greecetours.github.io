@@ -228,6 +228,10 @@ button{
             }
             .off-screen-menu.active {
                 right: 0;
+
+                ul{
+                    display: none;
+                }
             }
         
             .burger {
@@ -858,6 +862,312 @@ button{
             p{
                 font-weight: 700;
                 font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+
+    .container{
+
+        .nav_header_bg{
+            height: 1370px;
+
+            nav{
+                width: 389px;
+    
+                img{
+                    position: relative;
+                    left: -20px;
+                }
+    
+                ul{
+    
+                    li{
+                        display: none;
+                    }
+                }
+    
+                button{
+                    position: relative;
+                    left: -13px;
+                    display: none;
+                }
+    
+                .off-screen-menu.active {
+                    width: 200px;
+                    left: 150px;
+                    top: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .burger_gallery{
+                        margin-left: 70px;
+                    }
+    
+                    .contacts{
+                        
+                        h1{
+                            margin-left: 10px;
+                            text-align: center;
+                        }
+    
+                        p{
+                            text-align: center;
+                            width: 180px;
+                        }
+    
+                        .icons{
+    
+                            .images{
+    
+                                .img_bg{
+                                    position: relative;
+                                    left: 5px;
+    
+                                    img{
+                                        margin-left: 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 24px;
+    
+                        h1{
+                            margin-bottom: -30px;
+                        }
+    
+                        ul li::after {
+                            content: '';
+                            display: none;
+                        }
+                        
+                        li {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            header{
+                display: flex;
+                flex-direction: column;
+                margin-top: 55px;
+                margin-bottom: 100px;
+    
+                img{
+                    width: 390px;
+    
+                    
+                }
+                
+            }
+    
+            .tour_card{
+                width: 390px;
+                height: auto;
+    
+                .tour_title{
+                    display: flex;
+                    flex-direction: column;
+
+                    .tour_location{
+                        margin-bottom: 30px;
+                    }
+
+                    .tour_parameters{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+
+                        .item{
+                            gap: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        main{
+
+            .adventure_price_label{
+                width: 390px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .adventure{
+                    width: 390px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    .adventure_summary{
+                        width: 340px;                       
+
+                        p{
+                            width: 340px;
+                        }
+                    }
+
+                    .column{
+                        width: 380px;
+
+                        .included_stuff{
+                            width: 380px;
+
+                            p{
+                                width: 370px;
+                            }
+
+                            .www{
+                                display: flex;
+                                flex-direction: column;
+                                width: 340px !important;
+                                
+                                .options{
+                                    width: 340px !important;
+
+                                    ul{
+                                        width: 340px !important;
+                                    }
+                                }
+
+                                .xxx{
+                                    margin-left: 1px;
+                                }
+                            }
+                        }
+                    }
+
+                    .map{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        p{
+                            width: 340px;
+                        }
+
+                        iframe{
+                            width: 350px;
+                        }
+                    }
+
+                    hr{
+                        width: 340px !important;
+                    }
+
+                    .itinerary{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        p{
+                            width: 340px;
+                        }
+
+                        .itinerary_arrival{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 340px;
+
+                            hr{
+                                width: 340px !important;
+                            }
+
+                            .arrival_item{
+                                width: 340px;
+                                display: flex;
+                                flex-direction: column;
+
+                                p {
+                                    &:last-child {
+                                        margin-left: -770px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+
+                    .gallery{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        p{
+                            width: 340px;
+                            margin-bottom: 50px;
+                        }
+
+                        .gallery_images{
+                            
+                            .block{
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+
+                .price_card{
+                    margin: 0 auto;
+                    width: 380px;
+                }
+            }
+
+            .packages{
+                
+                .cards{
+                    width: 380px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 30px;
+
+                    .card_item{
+                        width: 370px;
+                    }
+                }
+            }
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 1200px !important;
+
+            h1{
+                width: 300px;
+            }
+
+            .footer_address{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 350px;
+                margin-left: 10px;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 380px;
+                }
             }
         }
     }
