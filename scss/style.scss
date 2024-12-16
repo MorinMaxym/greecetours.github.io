@@ -1554,7 +1554,7 @@ button{
     }
 }
 
-@media (max-width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 844px) {
 
     .container{
         
@@ -1563,28 +1563,67 @@ button{
 
             nav{
                 width: 389px;
-
+    
                 img{
                     position: relative;
                     left: -20px;
                 }
-
+    
                 ul{
-
+    
                     li{
                         display: none;
                     }
                 }
-
+    
                 button{
                     position: relative;
                     left: -13px;
                     display: none;
                 }
-
-                
-
+    
+                .off-screen-menu.active {
+                    width: 200px;
+                    left: 150px;
+                    top: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .burger_gallery{
+                        margin-left: 70px;
+                    }
+    
+                    .contacts{
+                        
+                        h1{
+                            margin-left: 10px;
+                            text-align: center;
+                        }
+    
+                        p{
+                            text-align: center;
+                            width: 180px;
+                        }
+    
+                        .icons{
+    
+                            .images{
+    
+                                .img_bg{
+                                    position: relative;
+                                    left: 5px;
+    
+                                    img{
+                                        margin-left: 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
+    
 
             header{
                 margin-top: -180px;
