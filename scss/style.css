@@ -1290,7 +1290,7 @@ button {
   font-size: 25px;
 }
 
-@media (max-width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 844px) {
   .container .bg {
     width: 389px;
   }
@@ -1308,6 +1308,32 @@ button {
     position: relative;
     left: -13px;
     display: none;
+  }
+  .container .bg nav .off-screen-menu.active {
+    width: 200px;
+    left: 150px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .bg nav .off-screen-menu.active .burger_gallery {
+    margin-left: 70px;
+  }
+  .container .bg nav .off-screen-menu.active .contacts h1 {
+    margin-left: 10px;
+    text-align: center;
+  }
+  .container .bg nav .off-screen-menu.active .contacts p {
+    text-align: center;
+    width: 180px;
+  }
+  .container .bg nav .off-screen-menu.active .contacts .icons .images .img_bg {
+    position: relative;
+    left: 5px;
+  }
+  .container .bg nav .off-screen-menu.active .contacts .icons .images .img_bg img {
+    margin-left: 40px;
   }
   .container .bg header {
     margin-top: -180px;
