@@ -1291,6 +1291,9 @@ button {
 }
 
 @media screen and (min-width: 390px) and (max-width: 844px) {
+  .container {
+    width: 389px;
+  }
   .container .bg {
     width: 389px;
   }
@@ -1340,15 +1343,17 @@ button {
     margin-bottom: 10px;
   }
   .container .bg header .header_info {
-    width: 389px;
-    margin-left: -35px;
+    width: 389px !important;
+    margin-left: -65px;
+    display: flex;
+    align-items: center;
   }
   .container .bg header .header_info .square_header {
     width: 50px;
     height: 50px;
     position: relative;
     top: 80px;
-    left: 300px;
+    left: -100px;
   }
   .container .bg header .header_info h1 {
     font-size: 50px;
@@ -1402,6 +1407,9 @@ button {
     padding: 20px;
     box-sizing: border-box;
   }
+  .container main .tour_blocks img {
+    width: 340px;
+  }
   .container main .icons_tour_blocks {
     display: flex;
     flex-direction: column;
@@ -1412,6 +1420,9 @@ button {
     top: -280px;
     left: 30px;
     margin-bottom: -250px;
+  }
+  .container main .icons_tour_blocks .block {
+    width: 340px;
   }
   .container main .icons_tour_blocks .location {
     position: relative;
@@ -1531,10 +1542,14 @@ button {
     width: 390px;
   }
   .container main .advanture_travel .advanture_travel_title_info .row ul {
+    width: 390px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .container main .advanture_travel .advanture_travel_title_info .row ul li p {
+    width: 390px;
   }
   .container main .advanture_travel .advanture_travel_title_info .row .line {
     width: 250px;
@@ -1660,6 +1675,9 @@ button {
   .container main .roaming_tales .article_list .article_contetnt .article_date {
     height: 50px;
   }
+  .container main .roaming_tales .article_list .article_contetnt .article_date p {
+    width: 100px !important;
+  }
   .container main .roaming_tales .article_list .article_preview .article_block {
     display: flex;
     flex-direction: column;
@@ -1668,6 +1686,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 340px;
+  }
+  .container main .roaming_tales .article_list .article_preview .article_block .article_item .article_date p {
+    width: 100px !important;
   }
   .container main .roaming_tales .article_list .article_preview .article_block .article_item p {
     width: 300px;
@@ -1677,7 +1699,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 375px;
+    width: 390px;
     height: 1200px !important;
   }
   .container footer h1 {
