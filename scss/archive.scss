@@ -224,6 +224,10 @@ button{
         }
         .off-screen-menu.active {
             right: 0;
+            
+            ul{
+                display: none;
+            }
         }
     
         .burger {
@@ -571,6 +575,122 @@ button{
             p{
                 font-weight: 700;
                 font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+
+    .container{
+
+        nav{
+            width: 389px;
+
+            img{
+                position: relative;
+                left: -20px;
+            }
+
+            ul{
+
+                li{
+                    display: none;
+                }
+            }
+
+            button{
+                position: relative;
+                left: -13px;
+                display: none;
+            }
+
+            .off-screen-menu.active {
+                width: 200px;
+                left: 150px;
+                top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .burger_gallery{
+                    margin-left: 70px;
+                }
+
+                .contacts{
+                    
+                    h1{
+                        margin-left: 10px;
+                        text-align: center;
+                    }
+
+                    p{
+                        text-align: center;
+                        width: 180px;
+                    }
+
+                    .icons{
+
+                        .images{
+
+                            .img_bg{
+                                position: relative;
+                                left: 5px;
+
+                                img{
+                                    margin-left: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 24px;
+
+                    h1{
+                        margin-bottom: -30px;
+                    }
+
+                    ul li::after {
+                        content: '';
+                        display: none;
+                    }
+                    
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 1200px !important;
+
+            h1{
+                width: 300px;
+            }
+
+            .footer_address{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 350px;
+                margin-left: 10px;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 380px;
+                }
             }
         }
     }
