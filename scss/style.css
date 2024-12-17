@@ -189,6 +189,9 @@ button {
 .container .bg nav .off-screen-menu.active {
   right: 0;
 }
+.container .bg nav .off-screen-menu.active ul {
+  display: none;
+}
 .container .bg nav .burger {
   padding: 1rem;
   display: flex;
@@ -880,6 +883,10 @@ button {
   align-items: center;
   margin-bottom: 200px;
 }
+.container main .travel_itineraries .iframe {
+  width: 1260px;
+  height: 700px;
+}
 .container main .travel_itineraries .frame {
   width: 1755px;
   height: 845px;
@@ -1338,6 +1345,21 @@ button {
   .container .bg nav .off-screen-menu.active .contacts .icons .images .img_bg img {
     margin-left: 40px;
   }
+  .container .bg nav .off-screen-menu.active ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+  .container .bg nav .off-screen-menu.active ul h1 {
+    margin-bottom: -30px;
+  }
+  .container .bg nav .off-screen-menu.active ul ul li::after {
+    content: "";
+    display: none;
+  }
+  .container .bg nav .off-screen-menu.active ul li {
+    display: block;
+  }
   .container .bg header {
     margin-top: -180px;
     margin-bottom: 10px;
@@ -1564,11 +1586,13 @@ button {
     width: 340px;
     font-size: 54px;
   }
-  .container main .travel_itineraries .frame {
-    width: 389px;
+  .container main .travel_itineraries .iframe {
+    width: 340px !important;
+    height: 400px;
+    border-radius: 15px;
   }
   .container main .travel_itineraries .frame2 {
-    width: 389px;
+    display: none;
   }
   .container main .travel_experience {
     width: 389px;
