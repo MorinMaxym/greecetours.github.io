@@ -230,6 +230,10 @@ button{
             }
             .off-screen-menu.active {
                 right: 0;
+                
+                ul{
+                    display: none;
+                }
             }
             
             .burger {
@@ -1055,6 +1059,11 @@ button{
             align-items: center;
             margin-bottom: 200px;
 
+            .iframe{
+                width: 1260px;
+                height: 700px;
+            }
+
             .frame{
                 width: 1755px;
                 height: 845px;
@@ -1622,6 +1631,25 @@ button{
                             }
                         }
                     }
+    
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 24px;
+    
+                        h1{
+                            margin-bottom: -30px;
+                        }
+    
+                        ul li::after {
+                            content: '';
+                            display: none;
+                        }
+                        
+                        li {
+                            display: block;
+                        }
+                    }
                 }
             }
     
@@ -1903,12 +1931,14 @@ button{
                     font-size: 54px;
                 }
 
-                .frame{
-                    width: 389px;
+                .iframe{
+                    width: 340px !important;
+                    height: 400px;
+                    border-radius: 15px;
                 }
 
                 .frame2{
-                    width: 389px;
+                    display: none;
                 }
             }
 
