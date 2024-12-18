@@ -186,6 +186,9 @@ button {
 .container nav .off-screen-menu.active {
   right: 0;
 }
+.container nav .off-screen-menu.active ul {
+  display: none;
+}
 .container nav .burger {
   padding: 1rem;
   display: flex;
