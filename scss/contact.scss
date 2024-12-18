@@ -224,6 +224,10 @@ button{
         }
         .off-screen-menu.active {
             right: 0;
+
+            ul{
+                display: none;
+            }
         }
     
         .burger {
